@@ -4,7 +4,7 @@ WORKDIR /tmp/
 #COPY .m2 /root/.m2
 RUN mvn clean install -DskipTests
  
-FROM tomcat:9.0-jre8-alpine
+FROM tomcat:9.0-jdk13-openjdk-buster
 COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 COPY manager.context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 COPY host-manager.context.xml /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
