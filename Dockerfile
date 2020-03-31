@@ -1,7 +1,7 @@
 FROM maven:3.6-jdk-8-alpine AS MAVEN_TOOL_CHAIN
 COPY TeaStore-dockerStudy /tmp/
 WORKDIR /tmp/
-COPY .m2 /root/.m2
+#COPY .m2 /root/.m2
 RUN mvn clean install -DskipTests
  
 FROM tomcat:9.0-jre8-alpine
