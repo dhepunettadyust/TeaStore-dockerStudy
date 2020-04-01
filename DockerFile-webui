@@ -9,5 +9,4 @@ COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 COPY manager.context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 COPY host-manager.context.xml /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
 COPY context-webui.xml /usr/local/tomcat/conf/context.xml
-COPY mysql-connector-java-5.1.44-bin.jar /usr/local/tomcat/lib/mysql-connector-java-5.1.44-bin.jar
 COPY --from=MAVEN_TOOL_CHAIN /tmp/services/tools.descartes.teastore.webui/target/tools.descartes.teastore.webui.war $CATALINA_HOME/webapps/tools.descartes.teastore.webui.war
