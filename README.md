@@ -10,4 +10,6 @@ To study docker multistage build and docker image functionality
 
  - Create docker internal network: `sudo docker network create teastore-Network`
  - Start database: `sudo docker run -p 3306:3306 -d --network teastore-Network --name teastore-db descartesresearch/teastore-db`
- - Start webapp: `sudo docker run -p 8080:8080 --network teastore-Network --name teastore-webui dhepunettadyust/teastore-webui`
+ - Start registry: `sudo docker run --network teastore-Network --name registry dhepunettadyust/teastore-registry:alpine`
+ - Start webui: `sudo docker run -p 8080:8080 --network teastore-Network --name teastore-webui dhepunettadyust/teastore-webui`
+  
